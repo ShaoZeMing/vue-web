@@ -1,9 +1,9 @@
 <template>
-        <el-row :gutter="24">
-            <el-col :span="16">
+        <el-row :gutter="24" justify="space-between">
+            <el-col  :xs="24" :sm="24" :md="16" :lg="16" :xl="16">
                 <div class="grid-content">
                     <el-row>
-                        <el-col :span="6" v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
+                        <el-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4"  v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
                             <div class="grid-content">
                                 <Card ></Card>
                             </div>
@@ -11,7 +11,7 @@
                     </el-row>
                 </div>
             </el-col>
-            <el-col :span="8" style="text-align: left">
+            <el-col  :xs="24" :sm="24" :md="8" :lg="8" :xl="8"  style="text-align: left">
                 <div class="grid-content">
                 <el-row :gutter="24">
                     <el-col :span="24">
@@ -27,7 +27,7 @@
                     <el-col :span="24">
                         <div class="grid-content">
                         <h2>推荐</h2>
-                       <img src="http://mijia365.oss-cn-beijing.aliyuncs.com/mijia-categories/IMG_51521546408986142.PNG" style="width: 400px;">
+                       <img src="http://mijia365.oss-cn-beijing.aliyuncs.com/mijia-categories/IMG_51521546408986142.PNG" class="image">
                         </div>
                     </el-col>
                 </el-row>
@@ -35,7 +35,13 @@
                     <el-col :span="24">
                         <div class="grid-content">
                         <h2>周排行榜</h2>
-                        <!--<img src="http://mijia365.oss-cn-beijing.aliyuncs.com/mijia-categories/IMG_51521546408986142.PNG">-->
+                            <el-row v-for="o in 10" :key="o" >
+                                <el-col :span="24" >
+                                    <div class="grid-content">
+                                        <card-list ></card-list>
+                                    </div>
+                                </el-col>
+                            </el-row>
                         </div>
                     </el-col>
                 </el-row>
@@ -43,7 +49,7 @@
                     <el-col :span="24">
                         <div class="grid-content">
                         <h2>专题</h2>
-                            <img src="http://mijia365.oss-cn-beijing.aliyuncs.com/mijia-categories/IMG_51521546408986142.PNG" style="width: 400px;">
+                            <img src="http://mijia365.oss-cn-beijing.aliyuncs.com/mijia-categories/IMG_51521546408986142.PNG" class="image">
                         </div>
                     </el-col>
                 </el-row>
@@ -53,6 +59,7 @@
 </template>
 <script>
     import Card from '@/components/Card.vue'
+    import CardList from '@/components/CardList.vue'
     export default {
         name: 'Content',
         // props: {
@@ -60,6 +67,7 @@
         // },
         components: {
             Card,
+            CardList,
         },
         data() {
 
@@ -76,3 +84,37 @@
     };
 </script>
 
+<style>
+
+    .el-row {
+        margin-bottom: 20px;
+    &:last-child {
+         margin-bottom: 0;
+     }
+    }
+    .el-col {
+        border-radius: 4px;
+    }
+    /*.bg-purple-dark {*/
+        /*background: #99a9bf;*/
+    /*}*/
+    /*.bg-purple {*/
+        /*background: #d3dce6;*/
+    /*}*/
+    /*.bg-purple-light {*/
+        /*background: #e5e9f2;*/
+    /*}*/
+    .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+    }
+    /*.row-bg {*/
+        /*padding: 10px 0;*/
+        /*background-color: #f9fafc;*/
+    /*}*/
+    .image {
+        border-radius: 4px;
+        width: 100%;
+        display: block;
+    }
+</style>

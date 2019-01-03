@@ -1,8 +1,8 @@
 <template>
-    <el-carousel :interval="5000" arrow="arrow" height="400px">
+    <el-carousel :interval="5000" arrow="arrow" >
         <el-carousel-item v-for="item in 4" :key="item">
-            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547031579&di=048e85c76b58cd55de747a4a1b8ec01f&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.97uimg.com%2Fback_pic%2F20%2F15%2F10%2F15%2F759683b9ac824b2b09f42d141d0e910b.jpg">
-            <h3>Hello World</h3>
+            <!--<h3>Hello World</h3>-->
+            <img src="https://img.zcool.cn/community/01af5f58258bb6a84a0e282b7e9d53.jpg@2o.jpg" class="image">
         </el-carousel-item>
     </el-carousel>
 </template>
@@ -36,6 +36,10 @@
         margin: 0;
     }
 
+    /*.image {*/
+        /*!*width: 100%;*!*/
+        /*!*display: block;*!*/
+    /*}*/
     .el-carousel__item:nth-child(2n) {
         background-color: #99a9bf;
     }
