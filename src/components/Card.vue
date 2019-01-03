@@ -1,5 +1,5 @@
 <template>
-  <el-card :body-style="{ padding: '0px' }" shadow="hover">
+  <el-card :body-style="{ padding: '0px' }" shadow="hover"  class="bg-card">
     <img src="http://element-cn.eleme.io/static/hamburger.50e4091.png" class="image">
     <div style="padding: 14px;">
       <span>好吃的汉堡</span>
@@ -57,7 +57,7 @@ export default {
   .clearfix:after {
     clear: both
   }
-  .el-card{
+  .bg-card{
     margin-top: 20px;
     margin-right: 20px;
   }

@@ -3,6 +3,22 @@
             <el-col  :xs="24" :sm="24" :md="16" :lg="16" :xl="16">
                 <div class="grid-content">
                     <el-row>
+                        <h2>精选作品</h2>
+                        <div class="line" >
+                            <hr style="border-color: #d5d6d5">
+                        </div>
+                        <el-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4"  v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
+                            <div class="grid-content">
+                                <Card ></Card>
+                            </div>
+                        </el-col>
+                    </el-row>
+
+                    <el-row>
+                        <h2>热门作品</h2>
+                        <div class="line" >
+                            <hr style="border-color: #d5d6d5">
+                        </div>
                         <el-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4"  v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
                             <div class="grid-content">
                                 <Card ></Card>
@@ -35,7 +51,7 @@
                     <el-col :span="24">
                         <div class="grid-content">
                         <h2>周排行榜</h2>
-                            <el-row v-for="o in 10" :key="o" >
+                            <el-row :gutter="24" v-for="o in 5" :key="o" >
                                 <el-col :span="24" >
                                     <div class="grid-content">
                                         <card-list ></card-list>

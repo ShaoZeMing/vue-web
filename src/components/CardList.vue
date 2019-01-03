@@ -1,13 +1,21 @@
 <template>
-  <el-card :body-style="{ padding: '0px' }" shadow="hover">
-    <img src="http://element-cn.eleme.io/static/hamburger.50e4091.png" class="image-card-list">
-    <div style="padding: 14px;margin-top: 15px; display: inline">
-      <span>好吃的汉堡</span>
-      <div  style="display: inline">
-        <time class="time">{{ currentDate }}</time>
-        <el-button type="text" class="button">操作按钮</el-button>
+  <el-card :body-style="{ padding: '2%' }" shadow="hover">
+    <el-col :span="8" >
+      <div class="grid-content">
+        <img src="http://element-cn.eleme.io/static/hamburger.50e4091.png" class="image-card-list">
       </div>
-    </div>
+    </el-col>
+    <el-col :span="16" >
+      <div class="grid-content">
+        <div class="card-list-content">
+          <span>好吃的汉堡</span>
+          <div>
+            <time class="time">创建时间:{{ currentDate }}</time>
+            <el-button type="text" class="button">操作按钮</el-button>
+          </div>
+        </div>
+      </div>
+    </el-col>
   </el-card>
 </template>
 
@@ -28,26 +36,29 @@ export default {
 
 
 <style>
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
 
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-  }
+  /*.bottom {*/
+    /*margin-top: 13px;*/
+    /*line-height: 12px;*/
+  /*}*/
 
-  .button {
-    padding: 0;
-    float: right;
-  }
+  /*.button {*/
+    /*padding: 0;*/
+    /*float: right;*/
+  /*}*/
 
   .image-card-list {
-    width: 100px;
+    width: 80%;
     display: inline;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    overflow: hidden;
+    /*margin-top: 10px;*/
   }
 
+  .card-list-content{
+    /*margin-top: 10px;*/
+  }
   .clearfix:before,
   .clearfix:after {
     display: table;
@@ -56,10 +67,6 @@ export default {
 
   .clearfix:after {
     clear: both
-  }
-  .el-card{
-    margin-top: 20px;
-    margin-right: 20px;
   }
 </style>
 
