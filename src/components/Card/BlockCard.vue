@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Card',
+  name: 'LiftCard',
   // props: {
     // work: Object
   // }

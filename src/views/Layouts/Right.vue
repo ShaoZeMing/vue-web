@@ -17,7 +17,7 @@
     // @ is an alias to /src
     import Nav from '@/components/Nav.vue'
     import Footer from '@/components/Footer.vue'
-    import Content from '@/containers/Content.vue'
+    import Content from '@/components/Content.vue'
     import Carousel from '@/components/Carousel.vue'
 
 
@@ -34,10 +34,11 @@
 
 
 <style>
-.el-main{
-    margin-top: 60px;
-}
-
-
+    .el-header, .el-header {
+        font-size: 12px;
+        background-color: #409EFF;
+        color: #606266;
+        line-height: 60px;
+    }
 </style>
 

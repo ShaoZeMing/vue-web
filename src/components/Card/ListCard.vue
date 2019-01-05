@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'CardList',
+  name: 'ListCard',
   // props: {
     // work: Object
   // }

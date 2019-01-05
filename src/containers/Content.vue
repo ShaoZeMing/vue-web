@@ -9,7 +9,7 @@
                         </div>
                         <el-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4"  v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
                             <div class="grid-content">
-                                <Card ></Card>
+                                <block-card ></block-card>
                             </div>
                         </el-col>
                     </el-row>
@@ -21,7 +21,7 @@
                         </div>
                         <el-col :xs="12" :sm="8" :md="6" :lg="6" :xl="4"  v-for="(o, index) in 11" :key="o" :offset="index > 0 ? 0 : 0">
                             <div class="grid-content">
-                                <Card ></Card>
+                                <block-card ></block-card>
                             </div>
                         </el-col>
                     </el-row>
@@ -32,7 +32,6 @@
                 <el-row :gutter="24">
                     <el-col :span="24">
                         <div class="grid-content">
-
                         <h2>少儿为什么学习编程</h2>
                         <p>注册一个帐户以管理、分享您的作品，并跟踪你的进度，作为老师，可以更快捷、高效地管理您的教室。</p>
                         <p>让我们开始编程吧！</p>
@@ -54,7 +53,7 @@
                             <el-row :gutter="24" v-for="o in 5" :key="o" >
                                 <el-col :span="24" >
                                     <div class="grid-content">
-                                        <card-list ></card-list>
+                                        <list-card ></list-card>
                                     </div>
                                 </el-col>
                             </el-row>
@@ -74,16 +73,16 @@
         </el-row>
 </template>
 <script>
-    import Card from '@/components/Card.vue'
-    import CardList from '@/components/CardList.vue'
+    import BlockCard from '@/components/Card/BlockCard.vue'
+    import ListCard from '@/components/Card/ListCard.vue'
     export default {
         name: 'Content',
         // props: {
         //     data: Object
         // },
         components: {
-            Card,
-            CardList,
+            BlockCard,
+            ListCard,
         },
         data() {
 

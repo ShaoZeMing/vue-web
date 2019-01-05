@@ -1,5 +1,5 @@
 <template>
-    <el-carousel :interval="5000" arrow="arrow" >
+    <el-carousel :interval="5000" arrow="arrow"  class="hidden-xs-only">
         <el-carousel-item v-for="item in 4" :key="item">
             <!--<h3>Hello World</h3>-->
             <img src="https://img.zcool.cn/community/01af5f58258bb6a84a0e282b7e9d53.jpg@2o.jpg" class="image">
