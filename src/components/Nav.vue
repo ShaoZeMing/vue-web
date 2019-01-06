@@ -15,8 +15,8 @@
             </div>
         </el-col>
         <el-col :xs="6" :sm="2" :md="8" :lg="9" :xl="11" class="hidden-sm-and-down">
-            <div class="grid-content bg-purple">
-
+            <div class="grid-content search-input">
+                <SearchInput></SearchInput>
             </div>
         </el-col>
         <el-col :xs="12" :sm="5" :md="4" :lg="3" :xl="1">
@@ -24,7 +24,7 @@
                 <el-row  span="24"  type="flex" justify="end">
                     <!--<el-col :span="6">-->
                         <div class="grid-content ">
-                            <img class="account-logo" src="../assets/images/min-logo.png"/>
+                            <img class="account-logo" src="../assets/images/face.png"/>
                         </div>
                     <!--</el-col>-->
                     <!--<el-col :span="18">-->
@@ -52,8 +52,13 @@
 <script>
 
 
+    import SearchInput from './Input/SearchInput.vue';
+
     export default {
         name: 'Nav',
+        components: {
+            SearchInput,
+        },
         data() {
             return {
                 activeIndex: '1',
@@ -89,7 +94,7 @@
 
     .nav-menu>a{
         display: inline-block;
-        color: #606266;
+        color: #100c0c;
         font-size: 18px;
         margin-left: 10%;
     }
@@ -97,26 +102,24 @@
     .nav-menu-account {
         text-align: right;
         margin-top: -10px;
-        color: aliceblue;
+        color: #100c0c;
     }
+
 
 
     .el-dropdown-link{
         font-size: 18px;
     }
 
+
     .account-logo {
         width: 40px;
         margin: 8px;
+        border-radius: 50%;
     }
 
 
 
-
-    .grid-content {
-        border-radius: 4px;
-        min-height: 36px;
-    }
 
     .el-header {
         position: fixed;
@@ -126,5 +129,11 @@
         background-color: #409EFF;
         color: #606266;
         line-height: 60px;
+    }
+
+
+    .search-input{
+        margin-top: -10px;
+        text-align: right;
     }
 </style>
