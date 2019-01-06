@@ -7,7 +7,7 @@
             @select="handleSelect">
         <i
                 class="el-input__icon el-icon-search"
-                slot="suffix"
+                slot="prefix"
                 @click="handleIconClick">
         </i>
         <template slot-scope="{ item }">
