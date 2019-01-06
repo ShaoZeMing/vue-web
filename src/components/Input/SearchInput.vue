@@ -4,7 +4,8 @@
             v-model="state3"
             :fetch-suggestions="querySearch"
             placeholder="请输入搜索内容"
-            @select="handleSelect">
+            @select="handleSelect"
+            clearable>
         <i
                 class="el-input__icon el-icon-search"
                 slot="prefix"

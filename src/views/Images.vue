@@ -4,8 +4,7 @@
             <Nav></Nav>
         </el-header>
         <el-main>
-            <Carousel></Carousel>
-            <Content></Content>
+            <Images></Images>
         </el-main>
         <el-footer>
             <Footer></Footer>
@@ -17,8 +16,7 @@
     // @ is an alias to /src
     import Nav from '@/containers/Nav.vue'
     import Footer from '@/containers/Footer.vue'
-    import Content from '@/containers/Content.vue'
-    import Carousel from '@/components/Carousel.vue'
+    import Images from '@/containers/Images.vue'
 
 
     export default {
@@ -26,8 +24,7 @@
         components: {
             Nav,
             Footer,
-            Content,
-            Carousel,
+            Images,
         }
     }
 </script>

@@ -8,15 +8,15 @@
         </el-col>
         <el-col :xs="6" :sm="13" :md="8" :lg="9" :xl="11" class="hidden-xs-only">
             <div class="grid-content nav-menu">
-                <a href="//baidu.com" target="_blank">首页</a>
-                <a href="//baidu.com" target="_blank">发现</a>
-                <a href="//baidu.com" target="_blank">社区</a>
-                <a href="//blog.4d4k.com" target="_blank">博客</a>
+                <router-link to="/"  class="nav-router">首页</router-link>
+                <router-link to="/images"  class="nav-router">发现</router-link>
+                <router-link to="/hub"  class="nav-router">社区</router-link>
+                <router-link to="/blog"  class="nav-router">博客</router-link>
             </div>
         </el-col>
         <el-col :xs="6" :sm="2" :md="8" :lg="9" :xl="11" class="hidden-sm-and-down">
             <div class="grid-content search-input">
-                <SearchInput></SearchInput>
+                <search-input></search-input>
             </div>
         </el-col>
         <el-col :xs="12" :sm="5" :md="4" :lg="3" :xl="1">
@@ -52,23 +52,12 @@
 <script>
 
 
-    import SearchInput from './Input/SearchInput.vue';
+    import SearchInput from '../components/Input/SearchInput.vue';
 
     export default {
         name: 'Nav',
         components: {
             SearchInput,
-        },
-        data() {
-            return {
-                activeIndex: '1',
-                activeIndex2: '1'
-            };
-        },
-        methods: {
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
-            }
         }
     }
 </script>
@@ -92,7 +81,7 @@
         margin-top: -10px;
     }
 
-    .nav-menu>a{
+    .nav-menu>a,.nav-router{
         display: inline-block;
         color: #100c0c;
         font-size: 18px;
@@ -133,7 +122,7 @@
 
 
     .search-input{
-        margin-top: -10px;
+        margin-top: -12px;
         text-align: right;
     }
 </style>
