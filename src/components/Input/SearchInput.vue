@@ -5,6 +5,7 @@
             :fetch-suggestions="querySearch"
             placeholder="请输入搜索内容"
             @select="handleSelect"
+            :trigger-on-focus="false"
             clearable>
         <i
                 class="el-input__icon el-icon-search"
@@ -109,11 +110,10 @@
 
 
 <style>
-    /*.my-autocomplete {*/
-
-    li {
+    .my-autocomplete li {
         line-height: normal;
         padding: 7px;
+
     }
 
     .name {
@@ -130,6 +130,5 @@
         color: #ddd;
     }
 
-    /*}*/
 </style>
 
