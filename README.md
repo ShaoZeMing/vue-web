@@ -1,5 +1,13 @@
 # now
 
+## demo
+- pc
+![图片标题](./public/demo-img/pc.png)
+- pc
+![图片标题](./public/demo-img/pad.png)
+- pc
+![图片标题](./public/demo-img/ipone.png)
+
 ## Project setup
 ```
 npm install
