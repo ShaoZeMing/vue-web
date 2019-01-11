@@ -7,7 +7,7 @@
             <Carousel></Carousel>
             <Content></Content>
         </el-main>
-        <el-footer>
+        <el-footer height="200">
             <Footer></Footer>
         </el-footer>
     </el-container>

@@ -1,10 +1,22 @@
 <template>
     <el-row :gutter="10" type="flex" class="footer" justify="space-between">
         <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="3">
-            <div class="grid-content bg-purple"></div>
+            <div class="grid-content ">
+                    <dl>
+                        <dd>  <a href="#">关于我们</a></dd>
+                        <dd>  <a href="#">关于我们</a></dd>
+                        <dd>  <a href="#">关于我们</a></dd>
+                    </dl>
+            </div>
         </el-col>
         <el-col :xs="12" :sm="10" :md="8" :lg="6" :xl="3">
-            <div class="grid-content bg-purple-light"></div>
+            <div class="grid-content ">
+                <dl>
+                    <dd>  <a href="#">关于我们</a></dd>
+                    <dd>  <a href="#">关于我们</a></dd>
+                    <dd>  <a href="#">关于我们</a></dd>
+                </dl>
+            </div>
         </el-col>
     </el-row>
 </template>
@@ -24,24 +36,13 @@
     }
 
     .el-footer {
-        text-align: right;
-        font-size: 12px;
+        text-align: left;
+        font-size: 0.9em;
         background-color: #409EFF;
         color: #303133;
-        line-height: 120px;
+        line-height: 30px;
     }
 
-    .bg-purple-dark {
-        background: #99a9bf;
-    }
-
-    .bg-purple {
-        background: #d3dce6;
-    }
-
-    .bg-purple-light {
-        background: #e5e9f2;
-    }
 
     .grid-content {
         border-radius: 4px;

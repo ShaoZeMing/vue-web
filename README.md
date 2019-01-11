@@ -1,12 +1,12 @@
-# now
+# vue-element-web
+- 基于vue + element 搭建的web 页面，用户自己初学vue练手
 
+## 自适应
 ## demo
-- pc
+- pc示例
 ![图片标题](./public/demo-img/pc.png)
-- pc
-![图片标题](./public/demo-img/pad.png)
-- pc
-![图片标题](./public/demo-img/ipone.png)
+- pad示例
+![pad示例](./public/demo-img/pad.png) ![iphone示例](./public/demo-img/ipone.png)
 
 ## Project setup
 ```
