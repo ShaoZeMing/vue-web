@@ -1,19 +1,31 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any
+    environment {
+         AN_ACCESS_KEY = credentials('zeming')
+         }
     stages {
         stage('Example') {
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
-            }
             steps {
-                echo "Hello, ${PERSON}, nice to meet you."
+                echo 'Hello World'
+                echo AN_ACCESS_KEY
+                npm install
+
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Hello This is Hello'
+                npm run serve
+
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hello This is Deploy'
+                npm run build
             }
         }
     }
 }
+
