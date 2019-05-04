@@ -1,29 +1,21 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any
-    environment {
-         AN_ACCESS_KEY = credentials('zeming')
-         }
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World'
-                echo AN_ACCESS_KEY
-                npm install
-
+                echo 'Hello World this is Example'
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello This is Hello'
-                npm run serve
+                echo 'Hello This is Test'
 
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Hello This is Deploy'
-                npm run build
             }
         }
     }
